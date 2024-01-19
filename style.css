@@ -1,0 +1,104 @@
+body {
+    background-color: #76987D;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'VT323', monospace;
+    position: relative;
+}
+
+p {
+    margin: 0;
+}
+
+.main {
+    position: absolute;
+    z-index: 1;
+    background-color: #9AA983;
+    height: 536px;
+    width: 500px;
+    border: 1px solid #656b69;
+}
+
+.instructions {
+    position: absolute;
+    z-index: 10;
+    background-color: #9AA983;
+    border: 1px solid #656b69;
+    height: 536px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.instructions > p {
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: center;
+    margin: 0px 20px;
+}
+
+
+/* Adjust styles for smaller screens */
+@media (max-width: 600px) {
+    .main {
+        max-width: 100%;
+    }
+}
+
+.score {
+    height: 30px;
+    font-weight: bold;
+    padding: 2.5px;
+    border-bottom: 1px solid #656b69;
+}
+
+.score>p {
+    font-size: 0.9rem;
+}
+
+.score>span {
+    font-size: 1rem;
+}
+
+#board {
+    height: 500px;
+    width: 500px;
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fill, minmax(10px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(10px, 1fr));
+}
+
+.food, .snake {
+    margin: 0;
+    padding: 0;
+}
+
+.food {
+    animation: blink 1s infinite;
+    height: 10px;
+    width: 10px;
+    background-color: #6F4858;
+}
+
+.snake {
+    height: 10px;
+    width: 10px;
+    background-color: #0e1914;
+}
+
+@keyframes blink {
+    0%, 100% {
+        background-color: #2F4858;
+    }
+
+    50% {
+        background-color: #6B4A8E;
+    }
+}
