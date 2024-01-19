@@ -187,7 +187,7 @@ function resetGame() {
     gameSpeed = 250;
     currentIterator = 0;
     currentScore = 0;
-    gamePoint.innerText = currentScore.toString().padStart(4);
+    gamePoint.innerText = currentScore.toString().padStart(4,"0");
     instructions.style.display = 'flex';
     gameScoreText.innerText = "";
     instructionText.innerText = defaultInstructionText;
